@@ -1,0 +1,52 @@
+.Card {
+  /* border: 1px solid #9fe262; */
+  position: fixed;
+  width: 180px;
+  margin: 20px;
+  border-radius: 5px;
+  overflow-x: hidden;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important;
+}
+
+.label {
+  margin: 5px;
+  font-style: bold;
+  font-size: 10px;
+  color: #159782;
+}
+
+.string {
+  background-color: #9eff41;
+  color: #159782;
+  font-size: 36px;
+  font-weight: 800;
+  padding: 20px;
+}
+
+.definition,
+.pinyin {
+  color: #00c3a4;
+  padding: 0 20px 20px 20px;
+  opacity: 0;
+  transition: opacity 2s;
+}
+
+.definition:hover,
+.pinyin:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.footer:hover {
+  cursor: pointer;
+}
+
+.footer {
+  height: 40px;
+  width: 100%;
+  background-color: #50e5cd;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
