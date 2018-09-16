@@ -76,6 +76,9 @@ class App extends Component {
             onRowSelection={this.onEntrySelection}
           />
         </div>
+        <div className="copyright">
+          {`${"\u00A9"} 2018 Michael Parlato. All Rights Reserved.`}
+        </div>
       </div>
     );
   }

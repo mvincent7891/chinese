@@ -12,10 +12,12 @@
   justify-content: center;
   background-color: white;
   z-index: 5;
+  background-color: #272727;
 }
 
 .Deck:hover {
   cursor: pointer;
+  background-color: #2f2f2f;
 }
 
 .clear {
@@ -29,8 +31,13 @@
 
 .Shuffle {
   color: #50e5cd;
+  background-color: #272727;
   position: fixed;
   left: 105px;
-  top: 45px;
+  top: 40px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important;
+}
+
+.Shuffle:hover {
+  background-color: #2f2f2f;
 }

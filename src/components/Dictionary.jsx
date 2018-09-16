@@ -69,11 +69,11 @@ class Dictionary extends Component {
       <div className="container">
         <div className="search">
           <div>
-            Definition Contains: <input onChange={this.filterByDefinition} />
+            Search Definition: <input onChange={this.filterByDefinition} />
           </div>
           <br />
           <div>
-            Pinyin: <input onChange={this.filterByPinyin} />
+            Search Pinyin: <input onChange={this.filterByPinyin} />
           </div>
           <br />
         </div>
