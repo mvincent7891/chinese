@@ -21,7 +21,6 @@ const TYPES = {
  */
 const rowSource = {
   beginDrag(props) {
-    console.log(props);
     return {
       entry: props.entry
     };
@@ -40,8 +39,6 @@ function collect(connect, monitor) {
 
 class Row extends Component {
   constructor(props) {
-    console.log("here");
-    super(props);
     this.state = {
       entry: props.entry
     };
@@ -57,7 +54,6 @@ class Row extends Component {
     const { isDragging, connectDragSource } = this.props;
     const { entry } = this.state;
 
-    console.log("dragging:", isDragging);
     return connectDragSource(
       <div style={{ opacity: isDragging ? 0.5 : 1 }} className="row">
         <div>{entry.string}</div>

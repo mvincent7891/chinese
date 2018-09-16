@@ -18,7 +18,8 @@ class App extends Component {
         string: "\u4e71"
       },
       dictionary: [],
-      deck: Basic
+      deck: Basic,
+      idx: 0
     };
 
     const dictionaryRequest = new Request(
@@ -36,6 +37,47 @@ class App extends Component {
 
   onEntrySelection = entry => {
     this.setState({ entry });
+  };
+
+  onNext = (step = 1) => {
+    const { idx, deck } = this.state;
+    const keys = Object.keys(deck);
+    const nextIdx = (idx + step) % (keys.length || 1);
+
+    const entry = deck[keys[nextIdx]];
+
+    if (!entry) {
+      return;
+    }
+
+    this.setState({
+      idx: nextIdx,
+      entry
+    });
+
+    this.onEntrySelection(entry);
+  };
+
+  onPrev = () => {
+    this.onNext(-1);
+  };
+
+  onRandom = () => {
+    const { deck } = this.state;
+    const keys = Object.keys(deck);
+    const nextIdx = Math.floor(Math.random() * keys.length);
+
+    const entry = deck[keys[nextIdx]];
+    if (!entry) {
+      return;
+    }
+
+    this.setState({
+      idx: nextIdx,
+      entry
+    });
+
+    this.onEntrySelection(entry);
   };
 
   onAdditionToDeck = entry => {
@@ -61,13 +103,15 @@ class App extends Component {
   };
 
   render() {
-    const { entry, dictionary, deck } = this.state;
+    const { entry, dictionary, deck, idx } = this.state;
     return (
       <div className="App">
         <Deck
+          idx={idx}
           deck={deck}
           onClearDeck={this.onClearDeck}
-          onNextCard={this.onEntrySelection}
+          onNext={this.onNext}
+          onRandom={this.onRandom}
           onResetDeck={this.onResetDeck}
         />
         <header className="App-header">
@@ -76,7 +120,13 @@ class App extends Component {
         </header>
         <br />
         <div className="vert-container">
-          <Card entry={entry} onAdditionToDeck={this.onAdditionToDeck} />
+          <Card
+            onRandom={this.onRandom}
+            onNext={this.onNext}
+            onPrev={this.onPrev}
+            entry={entry}
+            onAdditionToDeck={this.onAdditionToDeck}
+          />
           <Dictionary
             dictionary={dictionary}
             onAdditionToDeck={this.onAdditionToDeck}

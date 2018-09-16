@@ -7,8 +7,7 @@ class Deck extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      deck: props.deck,
-      idx: 0
+      deck: props.deck
     };
   }
 
@@ -19,35 +18,11 @@ class Deck extends Component {
   };
 
   onNext = () => {
-    const { idx, deck } = this.state;
-    const keys = Object.keys(deck);
-    const nextIdx = (idx + 1) % (keys.length || 1);
-
-    this.setState({
-      idx: nextIdx
-    });
-
-    const entry = deck[keys[nextIdx]];
-    if (!entry) {
-      return;
-    }
-    this.props.onNextCard(entry);
+    this.props.onNext();
   };
 
   onRandom = () => {
-    const { deck } = this.state;
-    const keys = Object.keys(deck);
-    const nextIdx = Math.floor(Math.random() * keys.length);
-
-    this.setState({
-      idx: nextIdx
-    });
-
-    const entry = deck[keys[nextIdx]];
-    if (!entry) {
-      return;
-    }
-    this.props.onNextCard(entry);
+    this.props.onRandom();
   };
 
   render() {
