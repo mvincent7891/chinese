@@ -54,6 +54,12 @@ class App extends Component {
     });
   };
 
+  onResetDeck = () => {
+    this.setState({
+      deck: Basic
+    });
+  };
+
   render() {
     const { entry, dictionary, deck } = this.state;
     return (
@@ -62,6 +68,7 @@ class App extends Component {
           deck={deck}
           onClearDeck={this.onClearDeck}
           onNextCard={this.onEntrySelection}
+          onResetDeck={this.onResetDeck}
         />
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
