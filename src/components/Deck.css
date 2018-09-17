@@ -2,7 +2,7 @@
   position: fixed;
   left: 15px;
   top: 15px;
-  height: 85px;
+  height: 50px;
   width: 75px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important;
   color: #159782;
@@ -16,19 +16,35 @@
   border-radius: 3px;
 }
 
-.Deck:hover {
-  cursor: pointer;
-  background-color: #2f2f2f;
-}
-
 .clear {
-  margin-top: 10px;
-  opacity: 0.2;
-  transition: opacity 0.5s;
+  position: fixed;
+  left: 15px;
+  top: 70px;
+  height: 25px;
+  width: 75px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important;
+  color: #529f9361;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  z-index: 5;
+  background-color: #272727;
+  border-radius: 3px;
+  margin-top: 5px;
+  transition: color 0.2s;
 }
 
 .clear:hover {
-  opacity: 1;
+  cursor: pointer;
+  background-color: #2f2f2f;
+  color: #159782;
+}
+
+.Deck:hover {
+  cursor: pointer;
+  background-color: #2f2f2f;
 }
 
 .Shuffle {

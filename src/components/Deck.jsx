@@ -29,8 +29,8 @@ class Deck extends Component {
     const { deck } = this.state;
     return (
       <div>
-        <div className="Deck">
-          <div onClick={this.onNext}>
+        <div>
+          <div className="Deck" onClick={this.onNext}>
             <small>Deck</small>
             <div>{Object.keys(deck).length}</div>
           </div>
