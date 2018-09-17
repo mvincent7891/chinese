@@ -11,12 +11,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      entry: {
-        kDefinition: "confusion, state of chaos, revolt",
-        kMandarin: "LUAN4",
-        uvalue: "U+4E71",
-        string: "\u4e71"
-      },
+      entry: Basic["U+4EBA"],
       dictionary: [],
       deck: Basic,
       idx: 0
