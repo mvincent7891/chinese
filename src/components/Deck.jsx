@@ -39,10 +39,10 @@ class Deck extends Component {
           </div>
         </div>
         <div className="Shuffle" onClick={this.onRandom}>
-          <Icon path={mdiShuffle} size={1} horizontal color="#50e5cd" />
+          <Icon path={mdiShuffle} size={1} horizontal color="#00dbfc" />
         </div>
         <div className="Shuffle Refresh" onClick={this.props.onResetDeck}>
-          <Icon path={mdiRefresh} size={1} horizontal color="#50e5cd" />
+          <Icon path={mdiRefresh} size={1} horizontal color="#00dbfc" />
         </div>
       </div>
     );
