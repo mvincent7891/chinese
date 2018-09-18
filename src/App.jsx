@@ -6,6 +6,10 @@ import Card from "./components/Card";
 import Deck from "./components/Deck";
 
 import Basic from "./assets/basic";
+import New from "./assets/new";
+
+import Icon from "@mdi/react";
+import { mdiSwapHorizontal } from "@mdi/js";
 
 class App extends Component {
   constructor(props) {
@@ -14,6 +18,8 @@ class App extends Component {
       entry: Basic["U+4EBA"],
       dictionary: [],
       deck: Basic,
+      decks: [Basic, New],
+      deckIdx: 0,
       idx: 0
     };
 
@@ -92,9 +98,27 @@ class App extends Component {
   };
 
   onResetDeck = () => {
+    const { decks, deckIdx } = this.state;
+    const newDeck = decks[deckIdx];
+    const newEntry = newDeck[Object.keys(newDeck)[0]];
+
     this.setState({
-      deck: Basic
+      entry: newEntry,
+      deck: newDeck
     });
+  };
+
+  onSwap = () => {
+    const { deckIdx, decks } = this.state;
+
+    const newIdx = (deckIdx + 1) % decks.length;
+
+    this.setState(
+      {
+        deckIdx: newIdx
+      },
+      () => this.onResetDeck()
+    );
   };
 
   render() {
@@ -110,6 +134,15 @@ class App extends Component {
           onResetDeck={this.onResetDeck}
         />
         <header className="App-header">
+          <div className="Swap" onClick={this.onSwap}>
+            <Icon
+              path={mdiSwapHorizontal}
+              size={1}
+              horizontal
+              color="#00dbfc"
+            />
+          </div>
+
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Learn Chinese - v1</h1>
         </header>

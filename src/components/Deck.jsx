@@ -12,6 +12,7 @@ class Deck extends Component {
   }
 
   static getDerivedStateFromProps = (props, state) => {
+    console.log(props.deck);
     return {
       deck: props.deck
     };
