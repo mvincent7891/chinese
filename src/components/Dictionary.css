@@ -3,6 +3,15 @@ td {
   padding-right: 25px;
 }
 
+a.fetch {
+  color: grey;
+}
+
+a.fetch:hover {
+  color: black;
+  cursor: pointer;
+}
+
 .row:hover {
   cursor: pointer;
 }

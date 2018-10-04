@@ -22,7 +22,13 @@ class App extends Component {
       deckIdx: 0,
       idx: 0
     };
+  }
 
+  onEntrySelection = entry => {
+    this.setState({ entry });
+  };
+
+  onFetchDictionary = () => {
     const dictionaryRequest = new Request(
       `http://ccdb.hemiola.com/characters?fields=kDefinition,kMandarin,uvalue,string`
     );
@@ -34,10 +40,6 @@ class App extends Component {
         });
       });
     });
-  }
-
-  onEntrySelection = entry => {
-    this.setState({ entry });
   };
 
   onNext = (step = 1) => {
@@ -156,6 +158,7 @@ class App extends Component {
             onAdditionToDeck={this.onAdditionToDeck}
           />
           <Dictionary
+            onFetchDictionary={this.onFetchDictionary}
             dictionary={dictionary}
             onAdditionToDeck={this.onAdditionToDeck}
             onRowSelection={this.onEntrySelection}

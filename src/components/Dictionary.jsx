@@ -68,6 +68,10 @@ class Dictionary extends Component {
     return (
       <div className="container">
         <div className="search">
+          <a className="fetch" onClick={this.props.onFetchDictionary}>
+            Fetch Dictionary
+          </a>
+          <br />
           <div>
             Search Definition: <input onChange={this.filterByDefinition} />
           </div>
