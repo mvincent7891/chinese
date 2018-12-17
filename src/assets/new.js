@@ -1,4 +1,78 @@
 const newWords = {
+  // Compiled
+  pengyou: {
+    kDefinition: "friend",
+    kMandarin: "PENG2YOU",
+    uvalue: "pengyou",
+    string: "朋友"
+  },
+  shiyou: {
+    kDefinition: "roommate",
+    kMandarin: "SHI4YOU3",
+    uvalue: "shiyou",
+    string: "室友"
+  },
+  jieshao: {
+    kDefinition: "V. to introduce; N. introduction",
+    kMandarin: "JIE4SHAO4",
+    uvalue: "jieshao",
+    string: "介绍"
+  },
+  dou: {
+    kDefinition: "Adv. all, both",
+    kMandarin: "DOU1",
+    uvalue: "dou",
+    string: "都"
+  },
+  liang: {
+    kDefinition: "Num. two",
+    kMandarin: "LIANG3",
+    uvalue: "liang",
+    string: "两"
+  },
+  renshi: {
+    kDefinition: "V. to know, to recognize, tobe acquainted with/familiar with",
+    kMandarin: "REN4SHI",
+    uvalue: "renshi",
+    string: "认识"
+  },
+  meiyou: {
+    kDefinition: "V. to not have, to be without, there isn't aren't",
+    kMandarin: "MEI2YOU3",
+    uvalue: "meiyou",
+    string: "没有"
+  },
+  nanpengyou: {
+    kDefinition: "N. boyfriend",
+    kMandarin: "NAN2PENG2YOU",
+    uvalue: "nanpengyou",
+    string: "男朋友"
+  },
+  yixia: {
+    kDefinition: "(used after a verb to indicate a brief action)",
+    kMandarin: "YI2XIA4",
+    uvalue: "yixia",
+    string: "一下"
+  },
+  ji: {
+    kDefinition: "how many",
+    kMandarin: "JI3",
+    uvalue: "ji",
+    string: "几"
+  },
+  duile: {
+    kDefinition: "by the way",
+    kMandarin: "DUI4LE",
+    uvalue: "duile",
+    string: "对了"
+  },
+  // Actual /////////////////////////
+  "U+4E2A": {
+    kDefinition: "numerary adjunct, piece; single",
+    kMandarin: "GE4 GE3",
+    uvalue: "U+4E2A",
+    string: "个"
+  },
   "U+4E66": {
     kDefinition: "book, letter, document; writings",
     kMandarin: "SHU1",
@@ -11,11 +85,24 @@ const newWords = {
     uvalue: "U+4E86",
     string: "了"
   },
+  "U+4ECB": {
+    kDefinition:
+      "forerunner, herald, harbinger; to lie between; sea shell; to wear armor",
+    kMandarin: "JIE4",
+    uvalue: "U+4ECB",
+    string: "介"
+  },
   "U+4F1A": {
     kDefinition: "can, be able to, know how to",
     kMandarin: "HUI4 KUAI4 GUI4",
     uvalue: "U+4F1A",
     string: "会"
+  },
+  "U+5BA4": {
+    kDefinition: "room, home, house, chamber",
+    kMandarin: "SHI4",
+    uvalue: "U+5BA4",
+    string: "室"
   },
   "U+5BF9": {
     kDefinition: "correct, right; facing, opposed; duile - by the way",
@@ -28,6 +115,12 @@ const newWords = {
     kMandarin: "SHAO3 SHAO4",
     uvalue: "U+5C11",
     string: "少"
+  },
+  "U+5E38": {
+    kDefinition: "common, normal, frequent, regular",
+    kMandarin: "CHANG2",
+    uvalue: "U+5E38",
+    string: "常"
   },
   "U+5F88": {
     kDefinition: "very, quite, much",
@@ -46,6 +139,12 @@ const newWords = {
     kMandarin: "MANG2",
     uvalue: "U+5FD9",
     string: "忙"
+  },
+  "U+6CA1": {
+    kDefinition: "not, have not, none; drown, sink",
+    kMandarin: "MEI2 MO4 ME5",
+    uvalue: "U+6CA1",
+    string: "没"
   },
   "U+6CD5": {
     kDefinition: "law, rule, regulation, statute; France, French",
@@ -71,6 +170,12 @@ const newWords = {
     uvalue: "U+7D2F",
     string: "累"
   },
+  "U+7ECD": {
+    kDefinition: "continue, carry on; join",
+    kMandarin: "SHAO4",
+    uvalue: "U+7ECD",
+    string: "绍"
+  },
   "U+7F8E": {
     kDefinition: "beautiful, pretty; pleasing; America",
     kMandarin: "MEI3",
@@ -89,17 +194,35 @@ const newWords = {
     uvalue: "U+8A9E",
     string: "語"
   },
+  "U+8BA4": {
+    kDefinition: "recognize, know, understand",
+    kMandarin: "REN4",
+    uvalue: "U+8BA4",
+    string: "认"
+  },
   "U+8BF4": {
     kDefinition: "speak, say, talk; scold, upbraid",
     kMandarin: "SHUO1 SHUI4 TUO1 YUE4",
     uvalue: "U+8BF4",
     string: "说"
   },
+  "U+8DDF": {
+    kDefinition: "heel; to follow, accompany; with",
+    kMandarin: "GEN1",
+    uvalue: "U+8DDF",
+    string: "跟"
+  },
   "U+8FD9": {
     kDefinition: "this, the, here",
     kMandarin: "ZHE4 ZHEI4",
     uvalue: "U+8FD9",
     string: "这"
+  },
+  "U+53CB": {
+    kDefinition: "friend, companion; fraternity",
+    kMandarin: "YOU3",
+    uvalue: "U+53CB",
+    string: "友"
   },
   "U+53EF": {
     kDefinition: "may, can, -able; possibly; keshi - however, but",
@@ -173,6 +296,12 @@ const newWords = {
     uvalue: "U+592A",
     string: "太"
   },
+  "U+670B": {
+    kDefinition: "friend, pal, acquaintance",
+    kMandarin: "PENG2",
+    uvalue: "U+670B",
+    string: "朋"
+  },
   "U+672C": {
     kDefinition: "root, origin, source; basis",
     kMandarin: "BEN3",
@@ -190,6 +319,18 @@ const newWords = {
     kMandarin: "YOU3 YOU4",
     uvalue: "U+6709",
     string: "有"
+  },
+  "U+6765": {
+    kDefinition: "come, coming; return, returning",
+    kMandarin: "LAI2 LAI4",
+    uvalue: "U+6765",
+    string: "来"
+  },
+  "U+7537": {
+    kDefinition: "male, man; son; baron; surname",
+    kMandarin: "NAN2",
+    uvalue: "U+7537",
+    string: "男"
   }
 };
 export default newWords;
