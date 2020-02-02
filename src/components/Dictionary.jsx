@@ -15,7 +15,7 @@ class Dictionary extends Component {
     const useState = state && state.dictionary.length > 0;
     const dictionary = useState ? state.dictionary : props.dictionary;
     return {
-      dictionary: dictionary
+      dictionary
     };
   };
 

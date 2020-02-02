@@ -30,7 +30,7 @@ class App extends Component {
 
   onFetchDictionary = () => {
     const dictionaryRequest = new Request(
-      `http://ccdb.hemiola.com/characters?fields=kDefinition,kMandarin,uvalue,string`
+      `https://ccdb.hemiola.com/characters?fields=kDefinition,kMandarin,uvalue,string`
     );
 
     fetch(dictionaryRequest).then(response => {
