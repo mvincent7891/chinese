@@ -7,6 +7,7 @@ import Deck from "./components/Deck";
 
 import Basic from "./assets/basic";
 import New from "./assets/new";
+import Full from "./assets/full"
 
 import Icon from "@mdi/react";
 import { mdiSwapHorizontal } from "@mdi/js";
@@ -29,17 +30,25 @@ class App extends Component {
   };
 
   onFetchDictionary = () => {
-    const dictionaryRequest = new Request(
-      `https://ccdb.hemiola.com/characters?fields=kDefinition,kMandarin,uvalue,string`
-    );
+    // const dictionaryRequest = new Request(
+    //   `https://ccdb.hemiola.com/characters?fields=kDefinition,kMandarin,uvalue,string`
+    // );
 
-    fetch(dictionaryRequest).then(response => {
-      response.json().then(dictionary => {
-        this.setState({
-          dictionary
-        });
-      });
-    });
+    // fetch(dictionaryRequest).then(response => {
+    //   response.json().then(dictionary => {
+    //     this.setState({
+    //       dictionary
+    //     });
+    //   });
+    // });
+
+    const dictionary = Full["words"]
+  
+    console.log('length:', dictionary.length)
+
+    this.setState({
+      dictionary
+    })
   };
 
   onNext = (step = 1) => {
