@@ -415,30 +415,11 @@ const basic = {
     uvalue: "U+6211",
     string: "我"
   },
-  "U+6587": {
-    kDefinition: "literature, culture, writing",
-    kMandarin: "WEN2 WEN4",
-    uvalue: "U+6587",
-    string: "文"
-  },
   "U+8001": {
     kDefinition: "old, aged; experienced",
     kMandarin: "LAO3",
     uvalue: "U+8001",
     string: "老"
-  },
-  "U+4E2D": {
-    kDefinition:
-      "central; center, middle; in the midst of; hit (target); attain",
-    kMandarin: "ZHONG1 ZHONG4",
-    uvalue: "U+4E2D",
-    string: "中"
-  },
-  "U+4ED6": {
-    kDefinition: "other, another; he, she, it",
-    kMandarin: "TA1",
-    uvalue: "U+4ED6",
-    string: "他"
   },
   "U+5B57": {
     kDefinition: "letter, character, word",
@@ -457,12 +438,6 @@ const basic = {
     kMandarin: "QING3 QING4 QING1 QING2",
     uvalue: "U+8ACB",
     string: "請"
-  },
-  "U+8BF7": {
-    kDefinition: "ask, request; invite; please",
-    kMandarin: "QING3 QING4 QING1 QING2",
-    uvalue: "U+8BF7",
-    string: "请"
   },
   "U+8C01": {
     kDefinition: "who? whom? whose? anyone?",
@@ -518,12 +493,6 @@ const basic = {
     uvalue: "U+95EE",
     string: "问"
   },
-  "U+540C": {
-    kDefinition: "same, similar; together with",
-    kMandarin: "TONG2 TONG4",
-    uvalue: "U+540C",
-    string: "同"
-  },
   "U+540D": {
     kDefinition: "name, rank, title, position",
     kMandarin: "MING2",
@@ -553,25 +522,6 @@ const basic = {
     kMandarin: "DE5 DI2 DI4",
     uvalue: "U+7684",
     string: "的"
-  },
-  "U+4E00": {
-    kDefinition: "one; a, an; alone",
-    kMandarin: "YI1",
-    uvalue: "U+4E00",
-    string: "一"
-  },
-  "U+4E2D": {
-    kDefinition:
-      "central; center, middle; in the midst of; hit (target); attain",
-    kMandarin: "ZHONG1 ZHONG4",
-    uvalue: "U+4E2D",
-    string: "中"
-  },
-  "U+5C71": {
-    kDefinition: "mountain, hill, peak",
-    kMandarin: "SHAN1",
-    uvalue: "U+5C71",
-    string: "山"
   },
   "U+5EA7": {
     kDefinition: "seat; stand, base",
